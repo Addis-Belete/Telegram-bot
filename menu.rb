@@ -15,4 +15,9 @@ For Food: Click '/food'"
   def food
     return "Beyeaynet: Click '/Beyeaynet'\nBurger: Click'/burger'\nPizza: Click '/pizza'"
   end
+
+  def success
+    return "Your Item is seccussfully selected 
+If you want to add More click or type your favorite one Or Click:'/Enough' to stop"
+  end
 end
