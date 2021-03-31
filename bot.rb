@@ -18,7 +18,7 @@ class Delivery
       message.reply do |reply|
         case @command
         when /start/i
-          reply.text = "Hello Welcome to Hide out cafe telegram bot. write /menu command to get the menu of the items"
+          reply.text = "Hello #{message.from.username}!\nWelcome to Hide out cafe telegram bot. write /menu command to get the menu of the items"
         when /menu/i
           reply.text = available_items
         when /hot_drinks/i
@@ -28,8 +28,10 @@ class Delivery
         when /food/i
           reply.text = food
         when /burger/i
+          maciato = 0
           @selected_items << "Burger"
           reply.text = success
+          maciato = 0
           puts @selected_items
         when /pizza/i
           @selected_items << "Pizza"
@@ -58,18 +60,22 @@ class Delivery
         when /maciato/i
           @selected_items << "Maciato"
           reply.text = success
+
           puts @selected_items
         when /milk/i
           @selected_items << "Milk"
           reply.text = success
           puts @selected_items
         when /Enough/i
-          reply.text = "your selected items are: \n#{list_of_selected_items}"
+          reply.text = "your selected items are: \n#{list_of_selected_items}\n Click '/Okay' to approve your order"
+        when /Okay/i
+          reply.text = "your Items are successufully ordered! the Delivery Man Knocks your door with in 30min"
         else
           reply.text = "I have no idea what #{@command.inspect} means."
         end
         puts "sending #{reply.text.inspect} to @#{message.from.username}"
         reply.send_with(@bot)
+        break
       end
     end
   end
