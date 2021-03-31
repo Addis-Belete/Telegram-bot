@@ -1,11 +1,11 @@
-require "telegram_bot"
-require_relative "./menu"
+require 'telegram_bot'
+require_relative './menu'
 
 class Delivery
   include Menu
 
   def initialize
-    @token = "1609826675:AAHCcMOoLK6BJiW14IBBaWYsD9JeyRt4YSw"
+    @token = '1609826675:AAHCcMOoLK6BJiW14IBBaWYsD9JeyRt4YSw'
     @bot = TelegramBot.new(token: @token)
     @selected_items = []
   end
@@ -29,47 +29,47 @@ class Delivery
           reply.text = food
         when /burger/i
           maciato = 0
-          @selected_items << "Burger"
+          @selected_items << 'Burger'
           reply.text = success
           maciato = 0
           puts @selected_items
         when /pizza/i
-          @selected_items << "Pizza"
+          @selected_items << 'Pizza'
           reply.text = success
           puts @selected_items
         when /Beyeaynet/i
-          @selected_items << "Beyeaynet"
+          @selected_items << 'Beyeaynet'
           reply.text = success
           puts @selected_items
         when /coca/i
-          @selected_items << "Cocacola"
+          @selected_items << 'Cocacola'
           reply.text = success
           puts @selected_items
         when /pepsi/i
-          @selected_items << "Pepsi"
+          @selected_items << 'Pepsi'
           reply.text = success
           puts @selected_items
         when /water/i
-          @selected_items << "Water"
+          @selected_items << 'Water'
           reply.text = success
           puts @selected_items
         when /tea/i
-          @selected_items << "Tea"
+          @selected_items << 'Tea'
           reply.text = success
           puts @selected_items
         when /maciato/i
-          @selected_items << "Maciato"
+          @selected_items << 'Maciato'
           reply.text = success
 
           puts @selected_items
         when /milk/i
-          @selected_items << "Milk"
+          @selected_items << 'Milk'
           reply.text = success
           puts @selected_items
         when /Enough/i
           reply.text = "your selected items are: \n#{list_of_selected_items}\n Click '/Okay' to approve your order"
         when /Okay/i
-          reply.text = "your Items are successufully ordered! the Delivery Man Knocks your door with in 30min"
+          reply.text = 'your Items are successufully ordered! the Delivery Man Knocks your door with in 30min'
         else
           reply.text = "I have no idea what #{@command.inspect} means."
         end
