@@ -7,6 +7,7 @@ class Delivery
   def initialize
     @token = "1609826675:AAHCcMOoLK6BJiW14IBBaWYsD9JeyRt4YSw"
     @bot = TelegramBot.new(token: @token)
+    @selected_items = []
   end
 
   def updates
@@ -26,6 +27,42 @@ class Delivery
           reply.text = cold_drinks
         when /food/i
           reply.text = food
+        when /burger/i
+          @selected_items << @command
+          reply.text = "Your Item is seccussfully selected"
+          puts @selected_items
+        when /pizza/i
+          @selected_items << @command
+          reply.text = "Your Item is seccussfully selected"
+          puts @selected_items
+        when /Beyeaynet/i
+          @selected_items << @command
+          reply.text = "Your Item is seccussfully selected"
+          puts @selected_items
+        when /coca/i
+          @selected_items << @command
+          reply.text = "Your Item is seccussfully selected"
+          puts @selected_items
+        when /pepsi/i
+          @selected_items << @command
+          reply.text = "Your Item is seccussfully selected"
+          puts @selected_items
+        when /water/i
+          @selected_items << @command
+          reply.text = "Your Item is seccussfully selected"
+          puts @selected_items
+        when /tea/i
+          @selected_items << @command
+          reply.text = "Your Item is seccussfully selected"
+          puts @selected_items
+        when /maciato/i
+          @selected_items << @command
+          reply.text = "Your Item is seccussfully selected"
+          puts @selected_items
+        when /milk/i
+          @selected_items << @command
+          reply.text = "Your Item is seccussfully selected"
+          puts @selected_items
         else
           reply.text = "I have no idea what #{@command.inspect} means."
         end
