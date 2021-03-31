@@ -28,41 +28,43 @@ class Delivery
         when /food/i
           reply.text = food
         when /burger/i
-          @selected_items << @command
+          @selected_items << "Burger"
           reply.text = success
           puts @selected_items
         when /pizza/i
-          @selected_items << @command
+          @selected_items << "Pizza"
           reply.text = success
           puts @selected_items
         when /Beyeaynet/i
-          @selected_items << @command
+          @selected_items << "Beyeaynet"
           reply.text = success
           puts @selected_items
         when /coca/i
-          @selected_items << @command
+          @selected_items << "Cocacola"
           reply.text = success
           puts @selected_items
         when /pepsi/i
-          @selected_items << @command
+          @selected_items << "Pepsi"
           reply.text = success
           puts @selected_items
         when /water/i
-          @selected_items << @command
+          @selected_items << "Water"
           reply.text = success
           puts @selected_items
         when /tea/i
-          @selected_items << @command
+          @selected_items << "Tea"
           reply.text = success
           puts @selected_items
         when /maciato/i
-          @selected_items << @command
+          @selected_items << "Maciato"
           reply.text = success
           puts @selected_items
         when /milk/i
-          @selected_items << @command
+          @selected_items << "Milk"
           reply.text = success
           puts @selected_items
+        when /Enough/i
+          reply.text = "your selected items are: \n#{list_of_selected_items}"
         else
           reply.text = "I have no idea what #{@command.inspect} means."
         end

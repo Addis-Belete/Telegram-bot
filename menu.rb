@@ -20,4 +20,15 @@ For Food: Click '/food'"
     return "Your Item is seccussfully selected 
 If you want to add More click or type your favorite one Or Click:'/Enough' to stop"
   end
+
+  def list_of_selected_items
+    string = ""
+    @selected_items.each_with_index do |item, index|
+      string += "#{index + 1} : #{item}\n"
+    end
+    string
+  end
+
+  def validate_selected_item(command)
+  end
 end
