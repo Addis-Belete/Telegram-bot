@@ -20,12 +20,12 @@ class Delivery
           reply.text = "Hello Welcome to Hide out cafe telegram bot. write /menu command to get the menu of the items"
         when /menu/i
           reply.text = available_items
-        when /greet/i
-          greetings = ["bonjour", "hola", "hallo", "sveiki", "namaste", "salaam", "szia", "halo", "ciao"]
-          reply.text = "#{greetings.sample.capitalize}, #{message.from.first_name}!"
+        when /hot_drinks/i
+          reply.text = hot_drinks
+        when /cold_drinks/i
+          reply.text = cold_drinks
         when /food/i
-          food = ["injera", "dabo", "duket"]
-          reply.text = "#{food.sample.capitalize}"
+          reply.text = food
         else
           reply.text = "I have no idea what #{@command.inspect} means."
         end

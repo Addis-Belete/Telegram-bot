@@ -1,18 +1,18 @@
 module Menu
   def available_items
-    return 'For Hot drinks: Click "/hot_drinks"\nFor Cold  drinks: Click"/cold_drinks"\n
-For Food: Click"/food"'
+    return "For Hot drinks: Click '/hot_drinks'\nFor Cold drinks: Click '/cold_drinks'\n
+For Food: Click '/food'"
   end
 
   def cold_drinks
-    return 'Cococala:/coca\n Pepsi:/pepsi \nWater:/water '
+    return "Cococala: Click '/coca'\nPepsi: Click '/pepsi'\nWater:Click '/water' "
   end
 
-  def soft_drinks
-    return ' Tea:/tea \n Macaito:/maciato Milk:/milk'
+  def hot_drinks
+    return "Tea: Click '/tea'\nMacaito: Click '/maciato'\nMilk: Click '/milk'"
   end
 
   def food
-    return 'Beyeaynet/beyeaynet \n Burger:/burger Pizza:/pizza'
+    return "Beyeaynet: Click '/Beyeaynet'\nBurger: Click'/burger'\nPizza: Click '/pizza'"
   end
 end
