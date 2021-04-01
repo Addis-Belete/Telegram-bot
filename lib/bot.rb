@@ -1,5 +1,7 @@
-require_relative '../lib/menu'
+# rubocop: disable Metrics/AbcSize
 # rubocop: disable Metrics/CyclomaticComplexity
+require_relative '../lib/menu'
+
 class Delivery
   include Select
   attr_reader :message, :bot
@@ -78,3 +80,6 @@ class Delivery
     end
   end
 end
+
+# rubocop: enable Metrics/CyclomaticComplexity
+# rubocop: enable Metrics/AbcSize
