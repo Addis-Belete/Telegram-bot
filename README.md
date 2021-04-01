@@ -2,7 +2,7 @@
 
 # Project Name: Telegram-Bot
 
-> We asked to build a telegram bot. based on that I created a simple telegram bot that helps clients to order a delivery from Hideout cafe.
+> I asked to build a telegram bot. based on that I created a simple telegram bot that helps clients to order a delivery from Hideout cafe.
 
 ![screenshot](./telegram.png)
 
