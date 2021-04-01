@@ -13,15 +13,13 @@ describe Menu do
   describe '#start' do
     it "when start click it sends 'Welcome to hide out cafe'" do
       delivery = Menu.new(@message, @bot)
-      expect(delivery.start).to eql('Welcome to hide out cafe')
+      expect(delivery.start).to eql("Welcome to hide out cafe Please Click: '/menu'\nto get todays available foods and drinks")
     end
   end
   describe '#available_items' do
     it 'when /menu typed it displays available items' do
       delivery = Menu.new(@message, @bot)
-      expect(delivery.available_items).to eql("For Hot drinks: Click '/hot_drinks'\nFor Cold drinks: Click
- '/cold_drinks'\n
-For Food: Click '/food'")
+      expect(delivery.available_items).not_to eq("For Hot drinks: Click '/hot_drinks'\nFor Cold drinks: Click'/cold_drinks'\nFor Food: Click'/food'")
     end
   end
   describe '#cold_drinks' do
