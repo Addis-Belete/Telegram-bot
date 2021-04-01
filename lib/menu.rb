@@ -28,6 +28,4 @@ If you want to add More click or type your favorite one Or Click:'/Enough' to st
     end
     string
   end
-
-  def validate_selected_item(command); end
 end

@@ -18,7 +18,8 @@ class Delivery
       message.reply do |reply|
         case @command
         when /start/i
-          reply.text = "Hello #{message.from.username}!\nWelcome to Hide out cafe telegram bot. write /menu command to get the menu of the items"
+          reply.text = "Hello #{message.from.username}!\nWelcome to Hide out cafe telegram bot.
+write /menu command to get the menu of the items"
         when /menu/i
           reply.text = available_items
         when /hot_drinks/i
