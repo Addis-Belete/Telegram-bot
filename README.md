@@ -1,59 +1,72 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
+# Project Name: Telegram-Bot
 
-> One paragraph statement about the project.
+> We asked to build a telegram bot. based on that I created a simple telegram bot that helps clients to order a delivery from Hideout cafe.
 
-![screenshot](./app_screenshot.png)
-
-Additional description about the project and its features.
+![screenshot](./telegram.png)
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
-
-## Live Demo
-
-[Live Demo Link](https://livedemo.com)
-
+- Ruby
 
 ## Getting Started
 
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
-
 To get a local copy up and running follow these simple example steps.
+
+- git clone git@github.com:Addis0943/Telegram-bot.git
+- cd Telegram-bot
+- Run bundle on terminal to install all dependencies
+- run ruby bin/main.rb
 
 ### Prerequisites
 
+- Basic knowledge Ruby
+- computer
+- Internet connection
+
 ### Setup
+
+- Vs code
+- Git
+- Github
 
 ### Install
 
-### Usage
+- Vs code
+- Git
+- Github
 
-### Run tests
+### To Use Rspec
 
-### Deployment
+To use the Rspec please copy the repository and run the following commands on your terminal:
 
+```
+$ cd <folder>
+```
 
+```
+$ rspec
+```
 
-## Authors
+### Linters
 
-👤 **Author1**
+Install some dependencies by running the following command
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/linkedinhandle)
+- Add gem 'rubocop', '~>0.81.0' to Gemfile
+- Run bundle install
 
-👤 **Author2**
+## Usage
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/linkedinhandle)
+- To use this bot run ruby bin/main in your terminal and search
+  @HideoutdeliveryBot on Telegram
+- Then Click the Start button and follow the instructions.
+
+👤 **Addis.B**
+
+- GitHub: [@Addis0943](https://github.com/Addis0943)
+- Twitter: [@Addis32018084](https://twitter.com/Addis32018084)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/addis-belete-134b98191/)
 
 ## 🤝 Contributing
 
