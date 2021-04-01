@@ -1,4 +1,4 @@
-require_relative "../lib/bot"
+require_relative '../lib/bot'
 
 class Menu
   def initialize(message, bot)
@@ -7,7 +7,8 @@ class Menu
   end
 
   def start
-    "Welcome to hide out cafe"
+    "Welcome to hide out cafe Please Click: '/menu'
+to get todays available foods and drinks"
   end
 
   def available_items
@@ -37,8 +38,18 @@ If you want to add More click or type your favorite one Or Click:'/Enough' to st
   end
 
   def list_of_selected_items(array)
-    string = ""
+    string = ''
     array.each_with_index do |item, index|
+      string += "#{index + 1} : #{item}\n"
+    end
+    string
+  end
+end
+
+module Select
+  def list_of_selected_items
+    string = ''
+    @selected_items.each_with_index do |item, index|
       string += "#{index + 1} : #{item}\n"
     end
     string
