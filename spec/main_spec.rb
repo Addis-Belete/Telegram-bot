@@ -23,4 +23,17 @@ describe Menu do
 For Food: Click '/food'")
     end
   end
+  describe "#cold_drinks" do
+    it "returns only list of cold_drinks" do
+      delivery = Menu.new(@message, @bot)
+      expect(delivery.cold_drinks).not_to eq("tea")
+    end
+  end
+
+  describe "#hot_drinks" do
+    it "returns list of hot drinks" do
+      delivery = Menu.new(@message, @bot)
+      expect(delivery.hot_drinks).not_to eq("tea")
+    end
+  end
 end
