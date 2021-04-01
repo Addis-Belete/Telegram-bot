@@ -36,4 +36,10 @@ For Food: Click '/food'")
       expect(delivery.hot_drinks).not_to eq("tea")
     end
   end
+  describe "#food" do
+    it "sends list of foods when /food clicked" do
+      delivery = Menu.new(@message, @bot)
+      expect(delivery.food).to eql("Beyeaynet: Click '/Beyeaynet'\nBurger: Click'/burger'\nPizza: Click '/pizza'")
+    end
+  end
 end
