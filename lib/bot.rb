@@ -1,6 +1,7 @@
 # rubocop: disable Metrics/AbcSize
 # rubocop: disable Metrics/CyclomaticComplexity
 require_relative '../lib/menu'
+require_relative '../lib/list'
 
 class Delivery
   include Select
@@ -32,7 +33,7 @@ class Delivery
       text = cmd.food
       @bot.api.send_message(chat_id: @message.chat.id, text: text)
     when /burger/i
-      @selected_items.push('Burger')
+      @@selected_items.push('Burger')
       text = cmd.success
       @bot.api.send_message(chat_id: @message.chat.id, text: text)
       puts @selected_items
