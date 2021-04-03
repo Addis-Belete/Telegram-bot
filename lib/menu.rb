@@ -47,6 +47,5 @@ If you want to add More click or type your favorite one Or Click:'/Enough' to st
 
   def selected_item(array, str)
     array << str
-    puts array
   end
 end

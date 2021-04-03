@@ -5,17 +5,16 @@ require_relative "../lib/list"
 
 class Delivery
   include Select
-  attr_reader :message, :bot
+  attr_reader :message, :bot, :selected_items
 
   def initialize(message, bot)
     @message = message
     @bot = bot
-    @selected_items = []
+    @selected_items = Array.new
   end
 
   def respond
     cmd = Menu.new(@message, @bot)
-
     case @message.text
     when /start/i
       text = cmd.start
@@ -33,10 +32,9 @@ class Delivery
       text = cmd.food
       @bot.api.send_message(chat_id: @message.chat.id, text: text)
     when /burger/i
-      @selected_items.push("Burger")
+      @selected_items += ["Burger"]
       text = cmd.success
       @bot.api.send_message(chat_id: @message.chat.id, text: text)
-      puts @selected_items
     when /pizza/i
       cmd.selected_item(@selected_items, "Burger")
       text = cmd.success
@@ -44,7 +42,8 @@ class Delivery
     when /Beyeaynet/i
       text = cmd.success
       @bot.api.send_message(chat_id: @message.chat.id, text: text)
-      @selected_items << "Beyeaynet"
+      @selected_items += ["beyeaynet"]
+      puts @selected_items
     when /coca/i
       @selected_items << "Cocacola"
       text = cmd.success
@@ -65,11 +64,11 @@ class Delivery
       text = cmd.success
       @bot.api.send_message(chat_id: @message.chat.id, text: text)
     when /milk/i
-      @selected_items << "Milk"
       text = cmd.success
       @bot.api.send_message(chat_id: @message.chat.id, text: text)
+      @selected_items << "Milk"
     when /Enough/i
-      puts @selected_items
+      @selected_items.push("MILK", "Burger", "water")
       text = "your selected items are: \n#{list_of_selected_items}\n Click '/Okay' to approve your order"
       @bot.api.send_message(chat_id: @message.chat.id, text: text)
     when /Okay/i
@@ -79,6 +78,7 @@ class Delivery
       text = "I have no idea what #{@message.text} means."
       @bot.api.send_message(chat_id: @message.chat.id, text: text)
     end
+    print @selected_items
   end
 end
 
