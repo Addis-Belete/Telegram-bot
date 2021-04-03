@@ -17,13 +17,13 @@ class Delivery
     cmd = Menu.new
     case @message.text
     when /start/i
-      text = cmd.start
+      text = start
       @bot.api.send_message(chat_id: @message.chat.id, text: text)
     when /menu/i
-      text = cmd.available_items
+      text = available_items
       @bot.api.send_message(chat_id: @message.chat.id, text: text)
     when /hot_drinks/i
-      text = cmd.hot_drinks
+      text = hot_drinks
       @bot.api.send_message(chat_id: @message.chat.id, text: text)
     when /cold_drinks/i
       text = cmd.cold_drinks
@@ -49,6 +49,7 @@ class Delivery
     when /coca/i
       @selected_items << "Cocacola"
       text = cmd.success
+      @bot.api.send_message(chat_id: @message.chat.id, text: text)
     when /pepsi/i
       @selected_items << "Pepsi"
       text = cmd.success
@@ -79,6 +80,22 @@ class Delivery
       text = "I have no idea what #{@message.text} means."
       @bot.api.send_message(chat_id: @message.chat.id, text: text)
     end
+  end
+
+  private
+
+  def start
+    "Welcome to hide out cafe Please Click: '/menu'
+to get todays available foods and drinks"
+  end
+
+  def available_items
+    "For Hot drinks: Click '/hot_drinks'\nFor Cold drinks: Click '/cold_drinks'\n
+For Food: Click '/food'"
+  end
+
+  def cold_drinks
+    "Cococala: Click '/coca'\nPepsi: Click '/pepsi'\nWater:Click '/water' "
   end
 end
 

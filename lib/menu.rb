@@ -1,20 +1,6 @@
 require_relative "../lib/bot"
 
 class Menu
-  def start
-    "Welcome to hide out cafe Please Click: '/menu'
-to get todays available foods and drinks"
-  end
-
-  def available_items
-    "For Hot drinks: Click '/hot_drinks'\nFor Cold drinks: Click '/cold_drinks'\n
-For Food: Click '/food'"
-  end
-
-  def cold_drinks
-    "Cococala: Click '/coca'\nPepsi: Click '/pepsi'\nWater:Click '/water' "
-  end
-
   def hot_drinks
     "Tea: Click '/tea'\nMacaito: Click '/maciato'\nMilk: Click '/milk'"
   end
