@@ -1,4 +1,4 @@
-require_relative "../lib/bot"
+require_relative '../lib/bot'
 
 class Menu
   def initialize(message, bot)
@@ -24,7 +24,7 @@ If you want to add More click or type your favorite one Or Click:'/Enough' to st
   end
 
   def list_of_selected_items(array)
-    string = ""
+    string = ''
     array.each_with_index do |item, index|
       string += "#{index + 1} : #{item}\n"
     end
