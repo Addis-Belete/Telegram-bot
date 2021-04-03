@@ -1,11 +1,6 @@
 require_relative "../lib/bot"
 
 class Menu
-  def initialize(message, bot)
-    @message = message
-    @bot = bot
-  end
-
   def start
     "Welcome to hide out cafe Please Click: '/menu'
 to get todays available foods and drinks"
