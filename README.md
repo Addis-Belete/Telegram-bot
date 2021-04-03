@@ -2,7 +2,7 @@
 
 # Project Name: Telegram-Bot
 
-> We asked to build a telegram bot. based on that I created a simple telegram bot that helps clients to order a delivery from Hideout cafe.
+> I asked to build a telegram bot. based on that I created a simple telegram bot that helps clients to order a delivery from Hideout cafe.
 
 ![screenshot](./telegram.png)
 
@@ -60,7 +60,15 @@ Install some dependencies by running the following command
 
 - To use this bot run ruby bin/main in your terminal and search
   @HideoutdeliveryBot on Telegram
-- Then Click the Start button and follow the instructions.
+- This telegram bot helps you to order a fast food from HideOut cafe. so in order to use the bot effectively follow the following steps:
+
+```
+- Click the Start Button
+- Click Menu to get list of available foods
+- Click on available food and select as much as you needed
+- Click on Enough when you finished
+- Finally Click on Okay to approve your order
+```
 
 👤 **Addis.B**
 
