@@ -14,7 +14,7 @@ class Delivery
   def respond(message, bot)
     @message = message
     @bot = bot
-    cmd = Menu.new
+    cmd = Menu.new(@message, @bot)
     case @message.text
     when /start/i
       text = start
@@ -23,10 +23,10 @@ class Delivery
       text = available_items
       @bot.api.send_message(chat_id: @message.chat.id, text: text)
     when /hot_drinks/i
-      text = hot_drinks
+      text = cmd.hot_drinks
       @bot.api.send_message(chat_id: @message.chat.id, text: text)
     when /cold_drinks/i
-      text = cmd.cold_drinks
+      text = cold_drinks
       @bot.api.send_message(chat_id: @message.chat.id, text: text)
     when /food/i
       text = cmd.food
