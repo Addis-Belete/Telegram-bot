@@ -56,6 +56,16 @@ Install some dependencies by running the following command
 - Add gem 'rubocop', '~>0.81.0' to Gemfile
 - Run bundle install
 
+### Instruction to use botfather
+
+```
+- search for botfather on telegram
+- Give the start command to BotFather by typing /start
+- You’ll see a list of commands that help you create, edit, and manage your bots. Since it’s your first time, you’ll want /newbot.
+- After giving the /newbot command, you get to pick a name and username for your bot.
+_Then finally the bot gives the API key.  The API key is how Telegram knows the code you write is associated with this particular bot.
+```
+
 ## Usage
 
 - To use this bot run ruby bin/main in your terminal and search
