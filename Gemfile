@@ -1,3 +1,5 @@
-source 'https://rubygems.org'
+source "https://rubygems.org"
 
-gem 'telegram-bot-ruby'
+gem "telegram-bot-ruby"
+gem "dotenv"
+gem "rspec"
